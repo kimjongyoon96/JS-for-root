@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="menu">
+<li>item-1</li>
+<li>item-2</li>
+<li>item-3</li>
+<li>item-4</li>
+<li>item-5</li>
+  </ul>
+
+  <script>
+   let menu =window.document.getElementById('menu');
+  // getElementById는 id값을 가진 요소를 찾아서 반환한다.
+
+ console.log(menu.children);
+  console.log(menu.children[1]);
+  console.dir(menu.children[0].style);
+
+for(let index =0; index<menu.children.length; index++){
+// length, 길이값이 얼마인지는 모르지만, 값은 정해져있다.
+
+// if(menu.children[index].textContent === "items-3") { --> 조건식 참 ture}
+
+if(index ===2) { // 조건식 참 ture
+// 참 즉, ture 일떄 실행 구문
+menu.children[index].style.color ="red";
+
+} else      //else,는 참이 아닐때 쓰는 구문이다.}
+
+menu.children[index].style.backgroundColor ="gray";
+
+}
+
+  </script>
+</body>
+</html>
